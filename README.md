@@ -7,7 +7,7 @@ to the outside world.
 
 Example to run the docker instance:
 
-    sudo docker run -e GRAPHITE_HOST=graphite.example.com -p 8125:8125 -d antonlindstrom/statsd
+    sudo docker run -e GRAPHITE_HOST=graphite.example.com -P -d antonlindstrom/statsd
 
 Environment variables that can be used to set options:
 
