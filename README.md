@@ -7,7 +7,7 @@ to the outside world.
 
 Example to run the docker instance:
 
-    sudo docker run -e GRAPHITE_HOST=graphite.example.com -P -d antonlindstrom/statsd
+    sudo docker run -e GRAPHITE_HOST=graphite.example.com -P -d davideme/docker-statsd
 
 Environment variables that can be used to set options:
 
@@ -17,7 +17,7 @@ Environment variables that can be used to set options:
 
 This image is available in the docker registry at antonlindstrom/statsd:
 
-    sudo docker pull antonlindstrom/statsd
+    sudo docker pull davideme/statsd
 
 The [statsd admin interface](https://github.com/etsy/statsd/blob/master/docs/admin_interface.md)
 can be accessed through `8126/tcp`.
