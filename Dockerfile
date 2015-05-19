@@ -1,20 +1,13 @@
 # Dockerfile for statsd
 #
-# VERSION               0.1
-# DOCKER-VERSION        0.4.0
 
-FROM ubuntu:trusty
+FROM node:0.12
 RUN apt-get -y update
-RUN apt-get -y install software-properties-common
-RUN apt-get -y install python-software-properties
-RUN add-apt-repository ppa:chris-lea/node.js
-RUN apt-get -y update
-
-RUN apt-get -y install git \
-                       nodejs
+RUN apt-get -y install git
 
 # statsd
 RUN mkdir /src && git clone https://github.com/etsy/statsd.git /src/statsd
+RUN cd /src/statsd/ && git checkout tags/v0.7.2
 
 ADD config.js /src/statsd/config.js
 
